@@ -36,28 +36,79 @@
 // alert($nome);
 // const $nome = document.querySelector("input[type: text]"
 
-function calcular_media(){
-    
+const calcular_media = (n1,n2) => (parseInt(n1) + parseInt(n2)) / 2;
+
+const verifica_situacao = (media) => media >=5 ? "Aprovado" : "Reprovado";
+
+const exibe_media = () =>{
     const $nome = document.getElementById('nome');
-    const $nota1 = document.getElementById('nota1');
-    const $nota2 = document.getElementById('nota2');
+    const nota1 = document.getElementById('nota1').value;
+    const nota2 = document.getElementById('nota2').value;
     const $media = document.getElementById('media');
     const $situacao = document.getElementById('situacao');
-    const media = (parseInt($nota1.value) + parseInt($nota2.value))/2;
-    if(media >= 5){
-        $situacao.value = "Aprovado";
-        $situacao.classList.add('aprovado');
-        // $situacao.style.color = 'green';
-        $nome.style.backgroundColor = 'green';
-    }
-    else{
-        $situacao.value = "Reprovado";
-        $situacao.classList.add('reprovado');
-        // $situacao.style.color = 'red';
-        $nome.style.backgroundColor = 'red';
-    }
+    
+    const media = calcular_media(nota1, nota2);
+
+    $situacao.value = verifica_situacao(media);
+    
+    // if(media >= 5){
+    //     $situacao.value = "Aprovado";
+    //     $situacao.classList.add('aprovado');
+    //     // $situacao.style.color = 'green';
+    //     $nome.style.backgroundColor = 'green';
+    // }
+    // else{
+    //     $situacao.value = "Reprovado";
+    //     $situacao.classList.add('reprovado');
+    //     // $situacao.style.color = 'red';
+    //     $nome.style.backgroundColor = 'red';
+    // }
     $media.value = media;
     console.log($nome.value, $nota1.value, $nota2.value);
 }
+
+const calcular_conceito = () => {
+    const media = document.getElementById('media').value;
+    const $conceito = document.getElementById('conceito');
+    if(media < 0){
+        $conceito.value = "Nota inválida";
+    }
+    else if(media == 0 || media <3){
+        $conceito.value = "E";
+    }
+    else if(media <5){
+        $conceito.value = "D";
+    }
+    else if(media <8){
+        $conceito.value = "C";
+    }
+    else if(media <10){
+        $conceito.value = "B";
+    }
+    else if(media == 10){
+        $conceito.value = "A";
+    }
+    else{
+        $conceito.value = "Nota inválida";
+    }
+}
+
+const calcular = () => {
+    exibe_media();
+    calcular_conceito();
+}
+
+function soma ( a, b){
+    return a + b;
+}
+
+const soma2 = ( a, b) => a + b;
+
+const quadrado = a => a * a;
+
+// function () {       |
+//     return 2 + 2;   | Jeito antigo de escrever uma função
+// }                   |
+
 const $calcular = document.getElementById('botao_media');
-$calcular.addEventListener('click', calcular_media);
+$calcular.addEventListener('click', calcular);
