@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testando o Javascript</title>
+    <style>
+        body{
+            background-color: black;
+            color:peachpuff;
+        }
+        .aprovado{
+            color: green;
+            border: none;
+        }
+        .reprovado{
+            color: red;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Teste">
+    <h1>Controle de Notas</h1>
+        Nome: 
+        <input type="text" id="nome" value="James">
+        <br><br>
+        Nota 1: 
+        <input type="text" id="nota1">
+        <br><br>
+        Nota 2: 
+        <input type="text" id="nota2">
+        <br><br>
+        <input type="button" value="Calcular Média" id="botao_media">
+        <br><br>
+        Média: 
+        <input type="text" id="media" disabled>
+        <br><br>
+        Situação: 
+        <input type="text" id="situacao" disabled>
+    <script src="./script.js"></script>
+</body>
+</html>
