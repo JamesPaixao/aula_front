@@ -18,11 +18,20 @@
             color: red;
             border: none;
         }
+        .container{
+            display: none;
+        }
+        .exibir{
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <input type="button" value="Teste">
-    <h1>Controle de Notas</h1>
+    <button class="exibir">Exibir</button>
+    <br>
+    <button class="ocultar">Ocultar</button>
+    <div class="container">
+        <h1>Controle de Notas</h1>
         Nome: 
         <input type="text" id="nome" value="James">
         <br><br>
@@ -42,6 +51,7 @@
         <br><br>
         Conceito:
         <input type="text" id="conceito" disabled>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>

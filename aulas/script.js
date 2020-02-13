@@ -36,6 +36,10 @@
 // alert($nome);
 // const $nome = document.querySelector("input[type: text]"
 
+const $exibir = document.querySelector('.exibir');
+const $container = document.querySelector('.container');
+const $ocultar = document.querySelector('.ocultar');
+
 const calcular_media = (n1,n2) => (parseInt(n1) + parseInt(n2)) / 2;
 
 const verifica_situacao = (media) => media >=5 ? "Aprovado" : "Reprovado";
@@ -47,9 +51,9 @@ const exibe_media = () =>{
     const $media = document.getElementById('media');
     const $situacao = document.getElementById('situacao');
     
-    const media = calcular_media(nota1, nota2);
+    const media = calcular_media (nota1, nota2);
 
-    $situacao.value = verifica_situacao(media);
+    $situacao.value = verifica_situacao (media);
     
     // if(media >= 5){
     //     $situacao.value = "Aprovado";
@@ -73,16 +77,16 @@ const calcular_conceito = () => {
     if(media < 0){
         $conceito.value = "Nota inválida";
     }
-    else if(media == 0 || media <3){
+    else if(media == 0 || media < 3){
         $conceito.value = "E";
     }
-    else if(media <5){
+    else if(media < 5){
         $conceito.value = "D";
     }
-    else if(media <8){
+    else if(media < 8){
         $conceito.value = "C";
     }
-    else if(media <10){
+    else if(media < 10){
         $conceito.value = "B";
     }
     else if(media == 10){
@@ -97,14 +101,17 @@ const calcular = () => {
     exibe_media();
     calcular_conceito();
 }
+const exibir = (el) => el.classList.add ('exibir');
+const ocultar = (el) => el.classList.remove ('exibir');
 
-function soma ( a, b){
-    return a + b;
-}
 
-const soma2 = ( a, b) => a + b;
+// function soma ( a, b){
+//     return a + b;
+// }
 
-const quadrado = a => a * a;
+// const soma2 = ( a, b) => a + b;
+
+// const quadrado = a => a * a;
 
 // function () {       |
 //     return 2 + 2;   | Jeito antigo de escrever uma função
@@ -112,3 +119,5 @@ const quadrado = a => a * a;
 
 const $calcular = document.getElementById('botao_media');
 $calcular.addEventListener('click', calcular);
+$exibir.addEventListener('click', () => exibir ($container));
+$ocultar.addEventListener('click', () => ocultar ($container));
