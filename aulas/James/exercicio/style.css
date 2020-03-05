@@ -1,0 +1,79 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+body{
+    background-color: thistle;
+}
+#container_principal {
+    width: 1200px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: thistle;
+}
+
+#container {
+    width: 600px;
+    min-height: 50vh;
+    height: auto;
+    margin-top: 50px;
+    float: left;
+    margin-left: 350px;
+}
+
+select {
+    width: 500px;
+    margin-left: 50px;
+    color: violet;
+    border: solid 2px violet;
+    border-radius: 5px;
+}
+select:hover{
+    background-color: rgba(238, 130, 238, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+#cidades {
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: solid 2px rgb(170, 45, 170);
+}
+
+.container_cidade {
+    width: 500px;
+    height: 25px;
+    box-sizing: border-box;
+    color: violet;
+}
+
+.container_numero {
+    width: 50px;
+    height: 25px;
+    box-sizing: border-box;
+    float: left;
+}
+.container_cidade:nth-child(even){
+    background-color: violet;
+    color: white;
+}
+.container_cidade_par:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: violet;
+    cursor: pointer;
+}
+.container_cidade_impar:hover{
+    background-color: rgba(238, 130, 238, 0.5);
+    color: white;
+    cursor: pointer;
+}
