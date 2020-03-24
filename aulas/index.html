@@ -3,55 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Testando o Javascript</title>
-    <style>
-        body{
-            background-color: black;
-            color:peachpuff;
-        }
-        .aprovado{
-            color: green;
-            border: none;
-        }
-        .reprovado{
-            color: red;
-            border: none;
-        }
-        .container{
-            display: none;
-        }
-        .exibir{
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <title>ViaCep</title>
 </head>
 <body>
-    <button class="exibir">Exibir</button>
-    <br>
-    <button class="ocultar">Ocultar</button>
-    <div class="container">
-        <h1>Controle de Notas</h1>
-        Nome: 
-        <input type="text" id="nome" value="James">
-        <br><br>
-        Nota 1: 
-        <input type="text" id="nota1">
-        <br><br>
-        Nota 2: 
-        <input type="text" id="nota2">
-        <br><br>
-        <input type="button" value="Calcular Média" id="botao_media">
-        <br><br>
-        Média: 
-        <input type="text" id="media" disabled>
-        <br><br>
-        Situação: 
-        <input type="text" id="situacao" disabled>
-        <br><br>
-        Conceito:
-        <input type="text" id="conceito" disabled>
-    </div>
-    <script src="./script.js"></script>
+    <header>
+        <div> Endereços - SENAI Jandira</div>
+    </header>
+    <main>
+        <form >
+            <div>
+                Nome: <input type="text" id='nome'>
+            </div>
+            <div>
+                CEP: <input type="text" id='cep'>
+            </div>
+            <div>
+                Endereço: <input type="text" id='endereco' disabled>
+            </div>
+            <div>
+                Bairro: <input type="text" id='bairro' disabled>
+            </div>
+            <div>
+                Cidade: <input type="text" id='cidade' disabled>
+            </div>
+            <div>
+                Estado: <input type="text" id='estado' disabled>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <span>
+            Copyright 2020 SENAI 1.27 | Todos os Direitos Reservados | Desenvolvido por  <a href="https://github.com/JamesPaixao"> James Paixão</a>
+        </span>
+    </footer>  
+    <script src="./viacep.js"></script>
 </body>
 </html>
