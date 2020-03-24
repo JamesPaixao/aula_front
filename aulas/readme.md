@@ -1,10 +1,10 @@
-#Atividade API - ViaCep
+# Atividade API - ViaCep
 
-##API utilizada:
+## API utilizada:
 
 ```bash
 https://viacep.com.br/
 ```
 
-##Orientador
+## Orientador
 [Professor Fernado Leonid](https://github.com/fernandoleonid)
